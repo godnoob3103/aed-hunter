@@ -5,12 +5,12 @@ import requests
 from ultralytics import YOLO
 
 # Set up your Google API credentials
-api_key = 'YOUR_API_KEY'
-cx = 'YOUR_CX'
+api_key = 'AIzaSyBLfqC0pbLFIqKvnHo18ii-306TZ_9bfFE'
+cx = '0302ca633d0644527'
 gis = GoogleImagesSearch(api_key, cx)
 
 # List of search queries
-search_queries = ['AED ประเทศไทย', 'Your_second_query']  # Replace 'Your_second_query' with your actual second query
+search_queries = ['AED ประเทศไทย', 'AED สนามบิน']  # Replace 'Your_second_query' with your actual second query
 
 # Common folder for all images and CSV file
 common_folder_path = 'D:/AED hunter/download picture and link/pic and link/common'
@@ -39,7 +39,7 @@ for search_query in search_queries:
 
     try:
         # Search for images
-        gis.search(search_params={'q': search_query, 'num': 20})
+        gis.search(search_params={'q': search_query, 'num': 10})
         results = gis.results()
 
         for i, image in enumerate(results):
